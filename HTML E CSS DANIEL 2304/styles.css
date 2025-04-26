@@ -1,0 +1,140 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 150vh;
+}
+
+:root{
+    --primary-color: #F596BD;
+    --secundary-color: #f5418c;
+    --bg-color: #ffdae6;
+    --font-family: "Roboto Mono", monospace;
+    --shadow: rgba(0, 0, 0, 0.3);
+    --transition-speed: 0.4s;
+}  
+
+body{
+    font-family: var(--font-family);
+    background-color: var(--bg-color);
+    color: var(--secundary-color); 
+    line-height: 2.0;
+    font-size: 18px;
+    display: flex;
+    flex-direction: column
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 3rem 2rem;
+    margin: 0 0 1,2 0;
+    text-align: center;
+    color: #f5418c
+}
+
+header img{
+    height: 40vh;
+    width: auto;
+    border-radius: 55%;
+}
+
+header h1{
+    font-size: 2.5rem;
+    margin: 1;
+    width: 100%;
+}
+
+nav {
+    width: 100%;
+}
+
+nav ul {
+    list-style: none;
+    
+}
+
+nav a{
+    color: #F57AAB;
+    text-decoration: none;
+    font-size: 1.5rem;
+    position: relative;
+    transition: color var(--transition-speed);
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: white;
+    left: 0;
+    bottom: -10px;
+    transition: width var(--transition-speed);
+
+
+}
+
+nav a:hover{
+    color:azure;
+
+}
+
+nav a:hover::after{
+    width: 100%;
+    
+}
+
+main{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr))
+}
+
+aside {
+    background: white;
+    padding: 1.5rem;
+    box-shadow: 0 4px 8px var(--shadow);
+    border-radius: 10px;
+
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+}
+
+article {
+    background: white;
+    padding: 1.5rem;
+    box-shadow: 0 4px 18px var (--shadow);
+    transition: trnasformn var (--transition-speed);
+    border-radius: 10px; 
+}
+
+article:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px var(--shadow);
+}
+
+article h3 {
+    margin-bottom: 1rem;
+    font-size: 2.0rem;
+    color: var(--primary-color);
+}
+
+footer {
+    background-color: var(--secundary-color);
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+}
